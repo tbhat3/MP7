@@ -95,9 +95,7 @@ public class MainCalcServer implements ActionListener {
         butTangent.setForeground(Color.pink);
         
         butClear = new JButton("Clear");
-        butClear.setBackground(Color.white);
-
-        
+        butClear.setBackground(Color.white);     
     }
 
     public void init() {
@@ -137,8 +135,6 @@ public class MainCalcServer implements ActionListener {
         butCosine.addActionListener(this);
         butSine.addActionListener(this);
         butTangent.addActionListener(this);
-        
-        
         butEquals.addActionListener(this);
         butClear.addActionListener(this);
     }
@@ -153,7 +149,7 @@ public class MainCalcServer implements ActionListener {
                 return;
             }
         }
-
+//identify the function to be used when a specific button is pressed
         if (source == butAddition) {
             setOutput(mp7calc.calculateSimple(Calculator.SimpleOperations.addition, readInput()));
         }
