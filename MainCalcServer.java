@@ -42,7 +42,7 @@ public class MainCalcServer implements ActionListener {
         }
 //create the new calculator, the individual buttons, and assign the buttons their representative signs
 //Color of the signs were changed so the basic arithmetic operations were red, the exponentials were blue
-//and everything else was a random color chosen from Java.Color
+//and everything else was a random color chosen from Java.Color using the setBackground method
         
         mp7calc = new Calculator();
         
