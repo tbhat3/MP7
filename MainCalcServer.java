@@ -29,7 +29,8 @@ public class MainCalcServer implements ActionListener {
 
     private final String[] buttonValue = { "0", "1", "2", "3", "4", "5", "6",
             "7", "8", "9" };
-
+    
+//Establish the Calculator framework (size and shape of the device as well as the buttons)
     public MainCalcServer() {
         frame = new JFrame("MP 7 Calculator");
         frame.setResizable(false);
@@ -39,11 +40,15 @@ public class MainCalcServer implements ActionListener {
         for (int x = 0; x < 10; x++) {
             but[x] = new JButton(String.valueOf(x));
         }
-
+//create the new calculator, the individual buttons, and assign the buttons their representative signs
+//Color of the signs were changed so the basic arithmetic operations were red, the exponentials were blue
+//and everything else was a random color chosen from Java.Color
+        
+        mp7calc = new Calculator();
+        
         butAddition = new JButton("+");  
         butAddition.setOpaque(true);
         butAddition.setForeground(Color.red);
-        
         
         butSubtraction = new JButton("-"); 
         butSubtraction.setOpaque(true);
@@ -92,7 +97,7 @@ public class MainCalcServer implements ActionListener {
         butClear = new JButton("Clear");
         butClear.setBackground(Color.white);
 
-        mp7calc = new Calculator();
+        
     }
 
     public void init() {
